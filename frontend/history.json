@@ -1,0 +1,83 @@
+[
+  {
+    "request_id": "pt_9df627eb",
+    "drug_a": "ibuprofen",
+    "drug_b": "warfarin",
+    "review_status": "NEEDS_CLINICAL_REVIEW",
+    "summary": "Ibuprofen may cause severe stomach bleeding, especially when taken with a blood thinning or anticoagulant drug. The concomitant use of ibuprofen and warfarin may increase the risk of bleeding due to pharmacodynamic or pharmacokinetic mechanisms. The warfarin label advises consulting the labeling of all concurrently used drugs for complete information about interactions with warfarin sodium or increased risks for bleeding.",
+    "full_result": {
+      "request_id": "pt_9df627eb",
+      "trace_id": "361c51fab0240ad68721acfa67919840",
+      "drug_a": "ibuprofen",
+      "drug_b": "warfarin",
+      "review_status": "NEEDS_CLINICAL_REVIEW",
+      "summary": "Ibuprofen may cause severe stomach bleeding, especially when taken with a blood thinning or anticoagulant drug. The concomitant use of ibuprofen and warfarin may increase the risk of bleeding due to pharmacodynamic or pharmacokinetic mechanisms. The warfarin label advises consulting the labeling of all concurrently used drugs for complete information about interactions with warfarin sodium or increased risks for bleeding.",
+      "evidence": {
+        "drug_a_warnings": "Warnings Allergy alert: Ibuprofen may cause a severe allergic reaction, especially in people allergic to aspirin. Symptoms may include: rash facial swelling asthma (wheezing) hives skin reddening shock blisters If an allergic reaction occurs, stop use and seek medical help right away. Stomach bleeding warning: This product contains an NSAID, which may cause severe stomach bleeding. The chance is higher if you: take more or for a longer time than directed take a blood thinning (anticoagulant) or steroid drug have had stomach ulcers or bleeding problems have 3 or more alcoholic drinks every day while using this product are age 60 or older take other drugs containing prescription or nonprescription NSAIDs [aspirin, ibuprofen, naproxen, or others] Heart attack and stroke warning: NSAIDs, except aspirin, increase the risk of heart attack, heart failure, and stroke. These can be fatal. The ris",
+        "drug_b_warnings": "No warnings section returned by the FDA label.",
+        "label_interactions": "Ibuprofen label: No drug-interactions section returned by the FDA label.\n\nWarfarin label: 7 DRUG INTERACTIONS Concomitant use of drugs that increase bleeding risk, antibiotics, antifungals, botanical (herbal) products, and inhibitors and inducers of CYP2C9, 1A2, or 3A4. ( 7 ) Consult labeling of all concurrently used drugs for complete information about interactions with warfarin sodium or increased risks for bleeding. ( 7 ) 7.1 General Information Drugs may interact with warfarin sodium through pharmacodynamic or pharmacokinetic mechanisms. Pharmacodynamic mechanisms for drug interactions with warfarin sodium are synergism (impaired hemostasis, reduced clotting factor synthesis), competitive antagonism (vitamin K), and alteration of the physiologic control loop for vitamin K metabolism (hereditary resistance). Pharmacokinetic mechanisms for drug interactions with warfarin sodium are mainly enzyme induction, enzyme inhibition, and reduced plasma protein binding. It is importa",
+        "faers_co_report_count": 0
+      },
+      "limitations": [
+        "For research and pharmacovigilance triage only \u2014 not medical advice.",
+        "FDA adverse-event co-reports do not establish causality, incidence, or comparative safety.",
+        "A qualified clinician must review patient-specific medication decisions."
+      ],
+      "duration_seconds": 14.16
+    }
+  },
+  {
+    "request_id": "pt_c349027f",
+    "drug_a": "aspirin",
+    "drug_b": "clopidogrel",
+    "review_status": "NEEDS_CLINICAL_REVIEW",
+    "summary": "The FDA label for aspirin warns of a risk of severe stomach bleeding, especially when combined with other medications such as blood thinners or steroids. The label for clopidogrel also notes an increased risk of bleeding when combined with NSAIDs, warfarin, or other antiplatelet agents. The interaction between aspirin and clopidogrel may increase the risk of bleeding due to their combined antiplatelet effects.",
+    "full_result": {
+      "request_id": "pt_c349027f",
+      "trace_id": "3bd8592ad6dd4b18c90ab53a1287ec47",
+      "drug_a": "aspirin",
+      "drug_b": "clopidogrel",
+      "review_status": "NEEDS_CLINICAL_REVIEW",
+      "summary": "The FDA label for aspirin warns of a risk of severe stomach bleeding, especially when combined with other medications such as blood thinners or steroids. The label for clopidogrel also notes an increased risk of bleeding when combined with NSAIDs, warfarin, or other antiplatelet agents. The interaction between aspirin and clopidogrel may increase the risk of bleeding due to their combined antiplatelet effects.",
+      "evidence": {
+        "drug_a_warnings": "Warnings Reye's syndrome : Children and teenagers who have or are recovering from chicken pox or flu-like symptoms should not use this product. When using this product, if changes in behavior with nausea and vomiting occur, consult a doctor because these symptoms could be an early sign of Reye's syndrome, a rare but serious illness. Allergy alert : Aspirin may cause a severe allergic reaction, which may include: hives facial swelling shock asthma (wheezing) Stomach bleeding warning: This product contains an NSAID, which may cause severe stomach bleeding. The chance is higher if you: are age 60 or older have had stomach ulcers or bleeding problems take a blood thinning (anticoagulant) or steroid drug take other drugs containing prescription or nonprescription NSAIDs [aspirin, ibuprofen, naproxen, or others] have 3 or more alcoholic drinks every day while using this product take more or fo",
+        "drug_b_warnings": "No warnings section returned by the FDA label.",
+        "label_interactions": "Aspirin label: No drug-interactions section returned by the FDA label.\n\nClopidogrel label: 7 DRUG INTERACTIONS CYP2C19 inducers: Increases levels of clopidogrel active metabolite and increases platelet inhibition. ( 7.1 ) Opioids: Decreased exposure to clopidogrel. Consider use of parenteral antiplatelet agent. ( 7.3 ) Nonsteroidal anti-inflammatory drugs (NSAIDs), warfarin, selective serotonin and serotonin norepinephrine reuptake inhibitors (SSRIs, SNRIs): Increases risk of bleeding. ( 7.4 , 7.5 , 7.6 ) Other Antiplatelet Agents: Increases the risk of bleeding due to an additive effect. ( 7.7 ) Repaglinide (CYP2C8 substrates): Increases substrate plasma concentrations. ( 7.8 ) 7.1 CYP2C19 Inducers Since clopidogrel is metabolized to its active metabolite partly by CYP2C19, use of drugs that induce the activity of this enzyme would be expected to result in increased drug levels of the active metabolite of clopidogrel. Rifampin strongly induces CYP2C19 resulting to both an inc",
+        "faers_co_report_count": 0
+      },
+      "limitations": [
+        "For research and pharmacovigilance triage only \u2014 not medical advice.",
+        "FDA adverse-event co-reports do not establish causality, incidence, or comparative safety.",
+        "A qualified clinician must review patient-specific medication decisions."
+      ],
+      "duration_seconds": 7.67
+    }
+  },
+  {
+    "request_id": "pt_62a21d82",
+    "drug_a": "insulin",
+    "drug_b": "metformin",
+    "review_status": "CAUTION_FLAGGED",
+    "summary": "The insulin label indicates that concomitant administration with certain drugs, including antidiabetic agents, may increase the risk of hypoglycemia. The metformin label warns that concomitant use with carbonic anhydrase inhibitors may increase the risk for lactic acidosis. The labels suggest dose adjustment and increased monitoring may be required when these drugs are used together.",
+    "full_result": {
+      "request_id": "pt_62a21d82",
+      "trace_id": "50a0a7b0b2c44208eb728e9a5d049b54",
+      "drug_a": "insulin",
+      "drug_b": "metformin",
+      "review_status": "CAUTION_FLAGGED",
+      "summary": "The insulin label indicates that concomitant administration with certain drugs, including antidiabetic agents, may increase the risk of hypoglycemia. The metformin label warns that concomitant use with carbonic anhydrase inhibitors may increase the risk for lactic acidosis. The labels suggest dose adjustment and increased monitoring may be required when these drugs are used together.",
+      "evidence": {
+        "drug_a_warnings": "No warnings section returned by the FDA label.",
+        "drug_b_warnings": "No warnings section returned by the FDA label.",
+        "label_interactions": "Insulin label: 7 DRUG INTERACTIONS The table below presents clinically significant drug interactions with Insulin Aspart Protamine and Insulin Aspart Mix 70/30 Table 3: Clinically Significant Drug Interactions with Insulin Aspart Protamine and Insulin Aspart Mix 70/30 Drugs that May Increase the Risk of Hypoglycemia Drugs: Antidiabetic agents, ACE inhibitors, angiotensin II receptor blocking agents, disopyramide, fibrates, fluoxetine, monoamine oxidase inhibitors, pentoxifylline, pramlintide, salicylates, somatostatin analog (e.g., octreotide), and sulfonamide antibiotics Intervention: Dose adjustment and increased frequency of glucose monitoring may be required when Insulin Aspart Protamine and Insulin Aspart is concomitantly administered with these drugs. Drugs that May Decrease the Blood Glucose Lowering Effect of Insulin Aspart Protamine and Insulin Aspart Drugs: Atypical antipsychotics (e.g., olan\n\nMetformin label: 7 DRUG INTERACTIONS Table 3 presents clinically significant drug interactions with metformin hydrochloride tablets. Table 3: Clinically Significant Drug Interactions with Metformin Hydrochloride Tablets Carbonic Anhydrase Inhibitors Clinical Impact: Carbonic anhydrase inhibitors frequently cause a decrease in serum bicarbonate and induce non-anion gap, hyperchloremic metabolic acidosis. Concomitant use of these drugs with metformin hydrochloride tablets may increase the risk for lactic acidosis. Intervention: Consider more frequent monitoring of these patients. Examples: Topiramate, zonisamide, acetazolamide or dichlorphenamide. Drugs that Reduce metformin hydrochloride tablet Clearance Clinical Impact: Concomitant use of drugs that interfere with common renal tubular transport systems involved in the renal elimination of metformin (e.g., organic cationic transporter-2 [OCT2] / multidrug",
+        "faers_co_report_count": 0
+      },
+      "limitations": [
+        "For research and pharmacovigilance triage only \u2014 not medical advice.",
+        "FDA adverse-event co-reports do not establish causality, incidence, or comparative safety.",
+        "A qualified clinician must review patient-specific medication decisions."
+      ],
+      "duration_seconds": 6.52
+    }
+  }
+]
