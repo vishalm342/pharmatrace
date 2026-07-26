@@ -327,6 +327,33 @@ uvicorn backend.main:app --reload
 streamlit run frontend/app.py
 ```
 
+## Run with Docker
+
+Files added for Docker support:
+
+- `docker-compose.yml`
+- `backend/Dockerfile`
+- `frontend/Dockerfile`
+
+Build and run locally:
+
+```bash
+docker compose up --build
+```
+
+Stop the stack:
+
+```bash
+docker compose down
+```
+
+App URLs:
+
+- Frontend: http://localhost:8501
+- Backend: http://localhost:8000
+
+Make sure a `.env` file exists in the project root before running Docker, since the backend service reads its environment from that file.
+
 ---
 
 ## Demo flow
