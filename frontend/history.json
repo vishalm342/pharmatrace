@@ -79,5 +79,32 @@
       ],
       "duration_seconds": 6.52
     }
+  },
+  {
+    "request_id": "pt_cf420518",
+    "drug_a": "warfarin",
+    "drug_b": "amiodarone",
+    "review_status": "NEEDS_CLINICAL_REVIEW",
+    "summary": "The warfarin label indicates a risk of increased bleeding when used concomitantly with certain drugs, including antibiotics and antifungals. The amiodarone label notes that it can interact with various drugs, including those that prolong the QT interval, and recommends avoiding concomitant use of such drugs. The potential for pharmacodynamic and pharmacokinetic interactions between warfarin and amiodarone necessitates careful review.",
+    "full_result": {
+      "request_id": "pt_cf420518",
+      "trace_id": "aa7560c7b78479babf992b72eeb5dc6e",
+      "drug_a": "warfarin",
+      "drug_b": "amiodarone",
+      "review_status": "NEEDS_CLINICAL_REVIEW",
+      "summary": "The warfarin label indicates a risk of increased bleeding when used concomitantly with certain drugs, including antibiotics and antifungals. The amiodarone label notes that it can interact with various drugs, including those that prolong the QT interval, and recommends avoiding concomitant use of such drugs. The potential for pharmacodynamic and pharmacokinetic interactions between warfarin and amiodarone necessitates careful review.",
+      "evidence": {
+        "drug_a_warnings": "No warnings section returned by the FDA label.",
+        "drug_b_warnings": "No warnings section returned by the FDA label.",
+        "label_interactions": "Warfarin label: 7 DRUG INTERACTIONS Concomitant use of drugs that increase bleeding risk, antibiotics, antifungals, botanical (herbal) products, and inhibitors and inducers of CYP2C9, 1A2, or 3A4. ( 7 ) Consult labeling of all concurrently used drugs for complete information about interactions with warfarin sodium or increased risks for bleeding. ( 7 ) 7.1 General Information Drugs may interact with warfarin sodium through pharmacodynamic or pharmacokinetic mechanisms. Pharmacodynamic mechanisms for drug interactions with warfarin sodium are synergism (impaired hemostasis, reduced clotting factor synthesis), competitive antagonism (vitamin K), and alteration of the physiologic control loop for vitamin K metabolism (hereditary resistance). Pharmacokinetic mechanisms for drug interactions with warfarin sodium are mainly enzyme induction, enzyme inhibition, and reduced plasma protein binding. It is importa\n\nAmiodarone label: 7 DRUG INTERACTIONS Amiodarone is a substrate for CYP3A and CYP2C8, so inhibitors and inducers affect amiodarone exposure ( 7 ) Amiodarone inhibits p-glycoprotein and CYP1A2, CYP2C9, CYP2D6, and CYP3A, increasing exposure to other drugs ( 7 ) 7.1 Pharmacodynamic Interactions Drugs Prolonging the QT Interval Co-administration of drugs prolonging the QT interval (such as class I and III antiarrhythmics, lithium, certain phenothiazines, tricyclic antidepressants, certain fluoroquinolone and macrolide antibiotics, azole antifungals, halogenated inhalation anesthetic agents) increases the risk of Torsade de Pointes. In general, avoid concomitant use of drugs that prolong the QT interval [see Warnings and Precautions (5.4) ] . Drugs That Slow Heart Rate Concomitant use of drugs with depressant effects on the sinus and AV nodes (e.g., digoxin, beta blockers, verapamil, diltiazem, ivabradine, cl",
+        "faers_co_report_count": 0
+      },
+      "limitations": [
+        "For research and pharmacovigilance triage only \u2014 not medical advice.",
+        "FDA adverse-event co-reports do not establish causality, incidence, or comparative safety.",
+        "A qualified clinician must review patient-specific medication decisions."
+      ],
+      "duration_seconds": 8.11
+    }
   }
 ]

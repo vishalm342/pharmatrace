@@ -10,7 +10,8 @@ st.set_page_config(
     layout="wide",
 )
 
-API_URL = os.getenv("API_URL", "http://backend:8000")
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
+API_URL = os.getenv("API_URL", "https://pharmatrace-c6ut.onrender.com")
 
 if "history" not in st.session_state:
     st.session_state.history = load_history()
