@@ -2,7 +2,7 @@
 
 > **An observable pharmacovigilance triage assistant grounded in live FDA evidence.**
 
-PharmaTrace is an AI-assisted drug interaction review tool built for the **Agents of SigNoz Hackathon 2026**. It combines live evidence retrieval from **OpenFDA**, structured LLM synthesis with **Groq**, and end-to-end tracing with **OpenTelemetry + SigNoz** so each review request is not only generated, but also observable and debuggable.  
+PharmaTrace is an AI-assisted drug interaction review tool built for the **Agents of SigNoz Hackathon 2026**. It combines live evidence retrieval from **OpenFDA**, structured LLM synthesis with **Groq**, and end-to-end tracing with **OpenTelemetry + SigNoz** so each review request is not only generated, but also observable and debuggable.
 
 Unlike a generic chatbot, PharmaTrace does not answer from model memory alone. It first retrieves current FDA label and adverse-event evidence, then uses an LLM to generate a structured review summary with explicit limitations and a clinician-review-oriented outcome.
 
@@ -14,12 +14,12 @@ Drug interaction analysis is a high-stakes workflow. If an AI system gives a wea
 
 PharmaTrace addresses this by making the whole pipeline visible:
 
-- user query submission,
-- FDA label retrieval,
-- FAERS co-report retrieval,
-- LLM synthesis,
-- latency and dependency behavior,
-- traceable end-to-end execution in SigNoz.
+- User query submission
+- FDA label retrieval
+- FAERS co-report retrieval
+- LLM synthesis
+- Latency and dependency behavior
+- Traceable end-to-end execution in SigNoz
 
 ---
 
@@ -28,6 +28,7 @@ PharmaTrace addresses this by making the whole pipeline visible:
 A user enters two drug names in the Streamlit app. The backend validates the request, retrieves relevant FDA evidence, and produces a structured interaction review with a summary, evidence blocks, limitations, and trace metadata. The request is instrumented with OpenTelemetry so the full flow can be inspected in SigNoz.
 
 ### Output includes
+
 - Review status such as `NEEDS_CLINICAL_REVIEW` or `CAUTION_FLAGGED`
 - Clinical-style summary grounded in retrieved evidence
 - Drug A warnings
@@ -44,6 +45,7 @@ A user enters two drug names in the Streamlit app. The backend validates the req
 Most AI demos stop at “it generated an answer.” PharmaTrace focuses on **observable, evidence-grounded generation**.
 
 ### Key differentiators
+
 - **Live retrieval-grounded generation** using OpenFDA and FAERS
 - **Structured backend contract** with FastAPI + Pydantic
 - **Bounded AI behavior** focused on synthesis, not free-form clinical claims
@@ -78,17 +80,17 @@ FastAPI Backend (/check)
   │
   ▼
 OpenTelemetry
-  ├─ request span
-  ├─ agent-analysis span
+  ├─ Request span
+  ├─ Agent-analysis span
   ├─ FDA lookup spans
-  └─ outbound dependency telemetry
+  └─ Outbound dependency telemetry
   │
   ▼
 SigNoz Cloud
-  ├─ service overview
-  ├─ latency / rate / error views
-  ├─ key operations
-  └─ external dependency metrics
+  ├─ Service overview
+  ├─ Latency / rate / error views
+  ├─ Key operations
+  └─ External dependency metrics
 ```
 
 ---
@@ -110,36 +112,20 @@ SigNoz Cloud
 ## Screenshots
 
 ### PharmaTrace frontend
-Add your frontend screenshot here.
 
-```md
-![alt text](image-4.png)
-```
-
-Use your captured frontend image for this section.
+![PharmaTrace Frontend](./assets/screenshots/pharmatrace-frontend.jpg)
 
 ### SigNoz service overview
-The built-in SigNoz service overview already shows request latency percentiles, request rate, Apdex, and error percentage for the `pharmatrace` service. [file:133]
 
-```md
-![alt text](image-2.png)
-
-```
+![SigNoz Overview](./assets/screenshots/signoz-overview.jpg)
 
 ### SigNoz external dependency metrics
-SigNoz also shows dependency-level metrics for outbound calls to `api.fda.gov` and `api.groq.com`, which helps identify whether slowness originates in the application or an external service. [file:132]
 
-```md
-![alt text](image-1.png)
-
-```
+![SigNoz External Metrics](./assets/screenshots/signoz-external-metrics.jpg)
 
 ### SigNoz key operations
-The key operations table highlights spans such as `pharmatrace.interaction_review`, `pharmatrace.agent_analysis`, and FDA lookup operations with percentile latency and error-rate visibility. [file:134]
 
-```md
-![alt text](image-3.png)
-```
+![SigNoz Key Operations](./assets/screenshots/signoz-key-operations.jpg)
 
 ---
 
@@ -147,6 +133,12 @@ The key operations table highlights spans such as `pharmatrace.interaction_revie
 
 ```text
 pharmatrace/
+├── assets/
+│   └── screenshots/
+│       ├── pharmatrace-frontend.jpg
+│       ├── signoz-overview.jpg
+│       ├── signoz-external-metrics.jpg
+│       └── signoz-key-operations.jpg
 ├── backend/
 │   ├── __init__.py
 │   ├── main.py
@@ -224,13 +216,16 @@ Example response:
 
 ## Observability
 
-PharmaTrace is instrumented with OpenTelemetry so each interaction review can be inspected as a trace in SigNoz. The current setup provides:
+PharmaTrace is instrumented with OpenTelemetry so each interaction review can be inspected as a trace in SigNoz.
 
-- service-level latency, rate, and error visibility, [file:133]
-- key operation timing for backend spans, [file:134]
-- external dependency metrics for FDA and Groq calls. [file:132]
+The current setup provides:
+
+- Service-level latency, rate, and error visibility
+- Key operation timing for backend spans
+- External dependency metrics for FDA and Groq calls
 
 ### Example operations visible in SigNoz
+
 - `pharmatrace.interaction_review`
 - `pharmatrace.agent_analysis`
 - `openfda.drug_label_lookup`
@@ -238,10 +233,11 @@ PharmaTrace is instrumented with OpenTelemetry so each interaction review can be
 - `POST /check`
 
 This observability layer makes it possible to debug:
-- slow FDA responses,
-- high-latency LLM calls,
-- backend failures,
-- trace-level execution paths for each review.
+
+- Slow FDA responses
+- High-latency LLM calls
+- Backend failures
+- Trace-level execution paths for each review
 
 ---
 
@@ -250,28 +246,29 @@ This observability layer makes it possible to debug:
 PharmaTrace is intentionally designed as a **triage assistant**, not a clinical decision-maker.
 
 ### Safety constraints
-- It does **not** diagnose or prescribe.
-- It does **not** claim comparative safety or causality from FAERS data.
+
+- It does **not** diagnose or prescribe
+- It does **not** claim comparative safety or causality from FAERS data
 - It returns structured review-oriented outcomes such as:
   - `NEEDS_CLINICAL_REVIEW`
   - `CAUTION_FLAGGED`
   - `NO_LABEL_SIGNAL_FOUND`
   - `ANALYSIS_UNAVAILABLE`
-- It always includes limitations and a medical disclaimer.
+- It always includes limitations and a medical disclaimer
 
-This matters because FDA adverse-event co-reports are observational signals and do not establish causality or incidence. [file:121]
+This matters because FDA adverse-event co-reports are observational signals and do not establish causality or incidence.
 
 ---
 
 ## How it works
 
-1. User submits two drug names from the Streamlit app.
-2. FastAPI validates the request with Pydantic.
-3. The backend retrieves FDA label evidence for both drugs.
-4. The backend retrieves an adverse-event co-report signal from OpenFDA / FAERS.
-5. Groq synthesizes a structured summary grounded in the retrieved evidence.
-6. The response is returned to the frontend and rendered in summary/evidence/observability tabs.
-7. OpenTelemetry exports traces and metrics to SigNoz.
+1. User submits two drug names from the Streamlit app
+2. FastAPI validates the request with Pydantic
+3. The backend retrieves FDA label evidence for both drugs
+4. The backend retrieves an adverse-event co-report signal from OpenFDA / FAERS
+5. Groq synthesizes a structured summary grounded in the retrieved evidence
+6. The response is returned to the frontend and rendered in summary, evidence, and observability tabs
+7. OpenTelemetry exports traces and metrics to SigNoz
 
 ---
 
@@ -284,23 +281,27 @@ The frontend stores recent analyses in a local JSON file so users can revisit pr
 ## Setup
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/vishalm342/pharmatrace.git
 cd pharmatrace
 ```
 
 ### 2. Create and activate a virtual environment
+
 ```bash
 python -m venv venv
 source venv/bin/activate
 ```
 
 ### 3. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 4. Create `.env`
+
 ```bash
 cp .env.example .env
 ```
@@ -315,11 +316,13 @@ OTEL_SERVICE_NAME=pharmatrace
 ```
 
 ### 5. Start the backend
+
 ```bash
 uvicorn backend.main:app --reload
 ```
 
 ### 6. Start the frontend
+
 ```bash
 streamlit run frontend/app.py
 ```
@@ -330,26 +333,26 @@ streamlit run frontend/app.py
 
 A good demo sequence for judges:
 
-1. Open PharmaTrace frontend
+1. Open the PharmaTrace frontend
 2. Run `ibuprofen + warfarin`
-3. Show structured summary and evidence tabs
-4. Run a second pair like `aspirin + clopidogrel`
+3. Show the structured summary and evidence tabs
+4. Run a second pair such as `aspirin + clopidogrel`
 5. Show recent analysis persistence in the sidebar
 6. Open SigNoz and show:
-   - service overview,
-   - key operations,
-   - external dependency metrics
+   - Service overview
+   - Key operations
+   - External dependency metrics
 7. Explain how observability helps debug latency and dependency failures
 
 ---
 
 ## Limitations
 
-- This is a hackathon prototype, not a medical device.
-- It depends on availability and quality of OpenFDA responses.
-- FAERS co-report counts are not causal evidence.
-- Local JSON history is lightweight persistence, not multi-user storage.
-- Final medication decisions must be made by a qualified clinician.
+- This is a hackathon prototype, not a medical device
+- It depends on availability and quality of OpenFDA responses
+- FAERS co-report counts are not causal evidence
+- Local JSON history is lightweight persistence, not multi-user storage
+- Final medication decisions must be made by a qualified clinician
 
 ---
 
